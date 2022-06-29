@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 const card = {
     display: "flex",
     justifyContent: "space-between",
@@ -7,8 +8,8 @@ const card = {
     padding: 5,
     margin: 10
 }
+
 const strikeHandler = (e) => {
-  e.preventDefault();
   e.target.style.textDecoration = "line-through";
 }
 
@@ -21,7 +22,6 @@ function Task({task, description}) {
         <button>Edit</button>
         <button>Delete</button>
         </div>
-
     </div>
   )
 }
