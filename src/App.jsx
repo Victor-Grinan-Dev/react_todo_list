@@ -1,9 +1,5 @@
 import React from "react";
-import TodoList from "./components/TodoList";
-import Counter from "./components/Counter";
-import GetTime from "./components/GetTime";
-import Animal from "./components/Animal";
-import Cars from "./components/Cars";
+import NewToDo from "./components/NewToDo";
 
 
 const mainCss = {
@@ -18,11 +14,7 @@ const mainCss = {
 function App() {
   return (
     <div className="App" style={mainCss}>
-      <TodoList />
-      <Counter />
-      <GetTime />
-      <Animal />  
-      <Cars />    
+      <NewToDo />   
     </div>
   );
 }
