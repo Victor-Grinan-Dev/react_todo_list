@@ -27,16 +27,14 @@ function NewToDo() {
           <h1>To-Do List</h1>
         </div>
         <div className="form">
-          <input key={counter} onChange={handleChange} type="text" value={inputText} />
+          <input  onChange={handleChange} type="text" value={inputText} />
           <button onClick={addItem}>
             <span>Add</span>
           </button>
         </div>
         <div>
           <ol>
-            {items.map(todoItem => (
-              <li> <Task task={todoItem} /> </li>
-            ))}
+            {items.map(todoItem => <li> <Task key={counter} task={todoItem} /> </li>)}
           </ol>
         </div>
       </div>

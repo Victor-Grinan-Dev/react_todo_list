@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const card = {
     display: "flex",
@@ -9,18 +10,21 @@ const card = {
     margin: 10
 }
 
-const strikeHandler = (e) => {
-  e.target.style.textDecoration = "line-through";
-}
-
 function Task({task, description}) {
+  const [striked, setStriked] = useState(false);
+
+  const strikeHandler = (e) => {
+    striked ? e.target.style.textDecoration = "line-through": e.target.style.textDecoration = "none"
+    setStriked(!striked)
+  }
+
   return (
     <div style={card} >
         <h3 style={{margin: 2}} onClick={strikeHandler}>"{task}"</h3>
         <p style={{margin: 2}}>{description}</p>
         <div className="buttons" style={{margin: 2}}>
-        <button>Edit</button>
-        <button>Delete</button>
+        <button style={{margin: 2}} >Edit</button>
+        <button style={{margin: 2}} > Delete</button>
         </div>
     </div>
   )
